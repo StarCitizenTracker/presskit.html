@@ -9,16 +9,22 @@
 
   <aside class="nav__subtitle">
     {{#if isProduct}}
-    <a href="..">press kit</a>
+    <a href="..">back to press kit</a>
     {{else}}
     <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
     {{/if}}
   </aside>
 
+  {{#if isCompany}}
   <ul class="nav__list">
     <li>
       <a class="nav__item" href="#factsheet">Factsheet</a>
     </li>
+
+    <li>
+      <a class="nav__item" href="#pressreleases">Press Releases</a>
+    </li>
+    
 
     {{#if presskit.description}}
     <li>
@@ -28,21 +34,21 @@
 
     {{#if presskit.history}}
     <li>
-      <a class="nav__item" href="#history">History</a>
+      <a class="nav__item" href="#history">History and Information</a>
     </li>
     {{/if}}
 
     {{#if presskit.histories}}
     <li>
-      <a class="nav__item" href="#history">History</a>
+      <a class="nav__item" href="#history">History and Information</a>
     </li>
     {{/if}}
 
-    {{#if products}}
+    <!-- {{#if products}}
     <li>
       <a class="nav__item" href="#projects">Projects</a>
     </li>
-    {{/if}}
+    {{/if}} -->
 
     {{#if presskit.widgets.mailchimp}}
     <li>
@@ -82,7 +88,7 @@
 
     {{#if presskit.quotes}}
     <li>
-      <a class="nav__item" href="#quotes">Selected Articles</a>
+      <a class="nav__item" href="#quotes">Select Quotes</a>
     </li>
     {{/if}}
 
@@ -99,7 +105,7 @@
     {{/if}}
 
     <li>
-      <a class="nav__item" href="#credits">Team</a>
+      <a class="nav__item" href="#credits">Major Contributions</a>
     </li>
 
     {{#if presskit.contacts}}
@@ -108,4 +114,11 @@
     </li>
     {{/if}}
   </ul>
+  {{/if}}
+  <!-- {{#if isProduct}}
+  <ul class="nav__list">
+    <li>
+      <a class="nav__item" href="#factsheet">Factsheet</a>
+    </li>
+  {{/if}} -->
 </nav>

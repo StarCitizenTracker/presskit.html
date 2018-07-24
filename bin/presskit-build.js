@@ -17,6 +17,7 @@ const description = `Generate a presskit based on information found in \`data.xm
 
   More information on ${chalk.blue('https://github.com/pixelnest/presskit.html#usage')}.`
 
+const _ = require("lodash");
 // -------------------------------------------------------------
 // Module.
 // -------------------------------------------------------------

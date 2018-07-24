@@ -5,7 +5,7 @@
   </head>
   <body>
     <div class="page grid">
-      {{>nav}}
+    {{>nav}}
 
       <div class="page-wrapper grid__item">
         <header class="page-header">
@@ -16,29 +16,33 @@
 
         <main class="page-content" role="main">
           <section class="block grid">
-            {{>factsheet}}
-
+            
             <article class="description grid__item">
+              <h3>FOR IMMEDIATE RELEASE</h3>
               {{>description}}
-
-              <h2 id="features">Features</h2>
+              {{#each presskit.histories}}
+              <p>{{.}}</p>
+              {{/each}}
+              <cite>-Signed, the StarCitizen Tracker team</cite>
+              {{#if presskit.features}}
+              <h2 id="features">Contributing Factors</h2>
               <ul>
                 {{#each presskit.features}}
                 <li>{{.}}</li>
                 {{/each}}
               </ul>
+              {{/if}}
             </article>
           </section>
 
-          {{>mailchimp}}
-          {{>assets}}
+          <!-- {{>mailchimp}}
           {{>widgets}}
           {{>recognition}}
           {{>about}}
-          {{>team}}
+          {{>team}} -->
         </main>
 
-        {{>footer}}
+        <!-- {{>footer}} -->
       </div>
     </div>
 

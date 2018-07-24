@@ -1,33 +1,38 @@
 {
-  "name": "presskit",
-  "version": "0.6.4",
-  "description": "Re-implementation of presskit() as a static site generator",
-  "license": "MIT",
-  "repository": "pixelnest/presskit.html",
+  "_from": "presskit",
+  "_id": "presskit@0.6.4",
+  "_inBundle": false,
+  "_integrity": "sha512-3V9vjDMfUMnvEaBRzA1EMjvfiCdw9MC/X7S7/nTqAVZdtLqxxlA42ZUMCZ73p+l0a5RlDwO1HCCZ1rs/0SXS1w==",
+  "_location": "/presskit",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "presskit",
+    "name": "presskit",
+    "escapedName": "presskit",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/presskit/-/presskit-0.6.4.tgz",
+  "_shasum": "0418ef9238c72c495208cf3ee51facc456573ef2",
+  "_spec": "presskit",
+  "_where": "H:\\",
   "author": {
     "name": "Pixelnest Studio",
     "url": "pixelnest.io"
   },
-  "keywords": [
-    "presskit",
-    "static site generator"
-  ],
-  "homepage": "https://github.com/pixelnest/presskit.html#readme",
-  "bugs": "https://github.com/pixelnest/presskit.html/issues",
-  "main": "lib/index.js",
   "bin": {
     "presskit": "bin/presskit"
   },
-  "scripts": {
-    "start": "node bin/presskit build --watch --dev data",
-    "test": "standard | snazzy && jest",
-    "tester": "jest --watch",
-    "docs": "./documentation",
-    "docs:example": "presskit build -DL -o docs/example data"
+  "bugs": {
+    "url": "https://github.com/pixelnest/presskit.html/issues"
   },
-  "engines": {
-    "node": ">=7.6.x"
-  },
+  "bundleDependencies": false,
   "dependencies": {
     "archiver": "^1.3.0",
     "browser-sync": "^2.18.5",
@@ -40,12 +45,39 @@
     "rimraf": "^2.6.1",
     "xml2js": "^0.4.17"
   },
+  "deprecated": false,
+  "description": "Re-implementation of presskit() as a static site generator",
   "devDependencies": {
-    "docco": "https://github.com/solarsailer/docco.git#ea3aea536562aed574d63904e2c2ab0138f4b40a",
+    "docco": "git+https://github.com/solarsailer/docco.git#ea3aea536562aed574d63904e2c2ab0138f4b40a",
     "jest": "^19.0.2",
     "mock-fs": "^4.4.1",
     "snazzy": "^5.0.0",
     "standard": "*"
+  },
+  "engines": {
+    "node": ">=7.6.x"
+  },
+  "homepage": "https://github.com/pixelnest/presskit.html#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "keywords": [
+    "presskit",
+    "static site generator"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "name": "presskit",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelnest/presskit.html.git"
+  },
+  "scripts": {
+    "docs": "./documentation",
+    "docs:example": "presskit build -DL -o docs/example data",
+    "start": "node bin/presskit build --watch --dev data",
+    "test": "standard | snazzy && jest",
+    "tester": "jest --watch"
   },
   "standard": {
     "globals": [
@@ -58,7 +90,5 @@
       "expect"
     ]
   },
-  "jest": {
-    "testEnvironment": "node"
-  }
+  "version": "0.6.4"
 }

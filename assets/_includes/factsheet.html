@@ -1,13 +1,12 @@
 <aside class="factsheet grid__item">
   <h2 id="factsheet" class="factsheet__title">Factsheet</h2>
 
-  {{#if isCompany}}
+{{#if isCompany}}
   <dl class="factsheet__list">
-    <dt>Developer:</dt>
+    <dt>Project Name:</dt>
     <dd>
       <a href=".">{{presskit.title}}</a>
     </dd>
-    <dd>Based in {{presskit.basedIn}}</dd>
 
     <dt>Founding date:</dt>
     <dd>{{presskit.foundingDate}}</dd>
@@ -17,36 +16,45 @@
       <a href="{{presskit.website}}">{{prettyURL presskit.website}}</a>
     </dd>
 
-    <dt>Press / Business contact:</dt>
-    <dd>
-      <a href="mailto:{{presskit.pressContact}}">{{presskit.pressContact}}</a>
-    </dd>
-
-    <dt>Social:</dt>
+    <dt>Press contact:</dt>
     {{#each presskit.socials}}
     <dd>
       <a href="{{link}}">{{name}}</a>
     </dd>
     {{/each}}
 
-    <dt>Releases:</dt>
-    {{#each products}}
+    <dt>E-mail:</dt>
     <dd>
-      <a href="{{permalink path}}">{{title}}</a>
+      <a href="mailto:{{presskit.pressContact}}">{{presskit.pressContact}}</a>
     </dd>
-    {{/each}}
+    
 
-    <dt>Address:</dt>
-    {{#each presskit.address.line}}
-    <dd>{{.}}</dd>
-    {{/each}}
-
-    <dt>Phone:</dt>
-    <dd>{{presskit.phone}}</dd>
+    <!-- <dt>Press Releases:</dt>
+    {{#if products}}
+      {{#each products}}
+      <dd>
+        <a href="{{permalink path}}">{{title}}</a> - {{#each presskit.releaseDates}}{{.}}{{/each}}
+      </dd>
+      {{/each}}
+    {{else}}
+    <dd>None yet</dd>
+    {{/if}} -->
+  </dl>
+  <h2 id="pressreleases" class="factsheet__title">Press Releases</h2>
+  {{#if products}}
+  <dl class="factsheet__list"></dl>
+      {{#each products}}
+      <dd>
+        <a href="{{permalink path}}">{{title}}{{history}}</a> - {{#each releaseDates}}{{.}}{{/each}}
+      </dd>
+      {{/each}}
+    {{else}}
+    <dd>None yet</dd>
+    {{/if}}
   </dl>
   {{/if}}
 
-  {{#if isProduct}}
+  <!-- {{#if isProduct}}
   <dl class="factsheet__list">
     <dt>Developer:</dt>
     <dd>
@@ -84,5 +92,5 @@
     </a>
   </p>
   {{/if}}
-  {{/if}}
+  {{/if}} -->
 </aside>
